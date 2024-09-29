@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+body{
+    background: white; 
+}
+
+.container{
+width: 80%;
+height: 40%;
+margin: auto;
+margin-top: 10%;
+}
+
+
+#love{
+display: block;
+text-align: center;
+width: 29%;
+margin: auto;
+color :#ff347f; 
+font-family: "Lilita One", sans-serif;
+font-weight: 400;
+font-style: normal;
+font-size: 40px;
+}
+.image{
+    margin: auto;
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.btn-group{
+    height: 5em;
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
+
+button {
+    width: 150px;
+    height: inherit;
+    color: white;
+    font-size: 1.2em;
+    border-radius: 30px;
+    outline: none;
+    cursor: pointer;
+    box-shadow: 0 2px 4px gray;
+    border: 2px solid #e94d58;
+}
+
+button.yes-btn {
+    background: #e94d58;
+    margin-right: 2em;
+    transform: translateX(-50%);
+}
+button.yes-btn:hover {
+    background: white;
+    color: #e94d58 ;
+}
+
+
+button.no-btn {
+    background: white;
+    color: #e94d58;
+    margin-left: 2em;
+    position: absolute;
+    transform: translateX(-50%);
+}
+
+.container1{
+ height: 100%;
+ width: 100%;
+}
+
+
+
+
+@media (max-width: 90%) {
+    .container {
+        width: 90%; 
+        height: auto; 
+        padding: 10px; 
+        margin-top: 5%; 
+    }
+
+    #love {
+        font-size: 24px; 
+    }
+
+    .btn-group {
+        width: 100%; 
+        flex-direction: column; 
+    }
+
+    button {
+        width: 100%; 
+        margin: 5px 0; 
+    }
+}
+
+
+
+
+
