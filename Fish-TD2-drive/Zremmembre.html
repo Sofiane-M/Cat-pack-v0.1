@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX01</title>
+</head>
+<body>
+    <div class="container">
+        <form>
+        <fieldset>
+        <legend>calculer le pgcd est ppcm</legend>
+        <input type="number" id="NB1" name="number 1"> 
+        <input type="number" id="NB2" name="number 2">
+        <select id="op" name="operation" onchange="change()">
+        <option value="..">Methode</option>
+        <option value="pgcd">PGCD</option>
+        <option value="ppcm">PPCM</option>
+        </select>
+        <input type="number" id="result" name="result"> 
+        </fieldset>
+        </form>
+        </div>  
+        <script>
+        function  pgcd(A,B){
+            let p;
+             while(B!=0)
+             {
+                 p = B;
+                 B = A % B ;
+                 A = p ; 
+             }
+            return A;
+            
+        }
+        function ppcm(a,b){
+            return (a*b)/pgcd(a,b);
+        }
+        
+
+
+        function change(){
+            let NB1 = parseFloat(document.getElementById("NB1").value);
+            let NB2 = parseFloat(document.getElementById("NB2").value);
+            let op1  = document.getElementById("op").value;
+            let result = document.getElementById("result");
+
+
+            if (op1 =="pgcd"){result.value=pgcd(NB1,NB2);}
+            if (op1 ==".."){result.value=""}
+            if( op1 =="ppcm"){result.value=ppcm(NB1,NB2);}
+        } </script>
+</body>
+</html>
