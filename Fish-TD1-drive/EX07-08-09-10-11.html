@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX07-8-9-10-11</title>
+    <style>
+       *{
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+        }
+        .wrapped{
+          margin-top: 30px;
+        }
+        .container{
+            text-align: center;
+            width: 40%;
+            margin: auto;
+            height: 100px;
+            border: 3px solid black;
+            font-weight: bold;
+            color: white;
+            background: linear-gradient(to right, #007BFF, #00C6FF);
+        }
+        #titre-principo{
+         margin-top: 30px;
+        }
+        .container2{
+          width: 40%;
+          margin: auto;
+        }
+       
+        ul{
+          list-style: none;
+          display: flex;
+        }
+        ul li a{
+          text-decoration: none;
+          font-weight: bold;
+        }
+        a:link,a:visited{
+          color: red;
+        }
+        ul li a:hover {
+        color: red;
+        background-color: white;
+        }
+        li{
+          border: 2px solid black;
+          padding: 20px;
+          width: 25%;
+          margin: 3px;
+          text-align: center;
+          background: linear-gradient(to right, #007BFF, #00C6FF);
+        }
+        p{
+          border: 2px solid red;
+          border-radius: 10px;
+          padding: 5px;
+          margin: 3px;
+          padding: 7px;
+        }
+        p::first-letter {
+        font-size:1.3em;
+        font-weight: bold; 
+        }
+        h2{
+        transform: rotate(3deg);
+        margin: 30px;
+        }
+        h1 {
+        text-shadow: 3px 3px 5px red;
+         }
+
+         .footer:hover {
+         transform: rotate(360deg);
+         transition: transform 2s ease;
+         }
+    </style>
+</head>
+<body>
+    
+
+
+  <div class="wrapped">
+    <div class="container"><h1 id="titre-principo">USTO « MB »</h1></div>
+    <div class="container2">  
+       <ul>
+        <li><a href="#">Lien 1</a></li>
+        <li><a href="#">Lien 2</a></li>
+        <li><a href="#">Lien 3</a></li>
+        <li><a href="#">Lien 4</a></li>
+       </ul>
+    </div>
+    <div class="container2 footer">
+      <h2>Un titre</h2>
+      <p>Du texte (plusieurs lignes ex: historique de l'usto)</p>
+      <p>Du texte supplémentaire pour démontrer le défilement...</p>
+    </div>
+  </div>
+<!-- 
+ Note:  
+last and first question in exo11 : we did't answer it yet and maybe there is some issue in the backgrounds colors and  in the list style's -->
+
+
+
+  
+
+</body>
+</html>
