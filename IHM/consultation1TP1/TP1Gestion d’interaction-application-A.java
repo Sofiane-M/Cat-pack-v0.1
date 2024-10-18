@@ -4,7 +4,7 @@ import java.awt.event.*;
 import javax.swing.*;
 
 
-public class BappA extends JFrame {
+public class appA extends JFrame {
 
 	private int clicknbr = 0;
 	 protected BappA(){
@@ -45,7 +45,7 @@ public class BappA extends JFrame {
     
     
     public static void main(String[] args) {
-    	 new BappA();
+    	 new appA();
     }
 }
 
