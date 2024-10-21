@@ -1,0 +1,64 @@
+package TP1;
+import javax.swing.*;
+import java.awt.*;
+            
+public class ButtonChoice extends JFrame {
+    
+	
+	protected ButtonChoice() {  
+   
+    	JPanel panel = new JPanel(); 
+        //panel.setLayout(new FlowLayout()); 
+    	panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
+        
+        JRadioButton radio1 = new JRadioButton("Radio button"); //create constructor
+        JRadioButton radio2 = new JRadioButton("Radio button");
+        JRadioButton radio3 = new JRadioButton("Radio button");
+        
+        ButtonGroup group = new ButtonGroup();
+        group.add(radio1);
+        group.add(radio2); 
+        group.add(radio3);
+        
+        panel.add(radio1);  
+        panel.add(radio2); 
+        panel.add(radio3);
+
+        
+        
+        
+        JMenuBar mb = new JMenuBar();
+        JMenu m1 = new JMenu("Fichier");
+        JMenu m2 = new JMenu("Aide");
+        mb.add(m1);
+        mb.add(m2);
+
+        JMenuItem openItem = new JMenuItem("Ouvrir");
+        JMenuItem saveItem = new JMenuItem("Sauvegarder");
+        m1.add(openItem);
+        m1.add(saveItem);
+        setJMenuBar(mb); 
+
+        
+        JPanel inputPanel = new JPanel();
+        
+      
+        JLabel label = new JLabel("Enter your Text:");
+        JTextField textField = new JTextField(10);
+        JButton sendButton = new JButton("Envoyer");
+        inputPanel.add(label);
+        inputPanel.add(textField);
+        inputPanel.add(sendButton);
+
+        add(panel); //add the panel to the page
+        add(inputPanel, BorderLayout.SOUTH);
+
+        setSize(500, 200);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setVisible(true);
+	}
+
+    public static void main(String[] args) {
+        new ButtonChoice(); 
+    }
+}

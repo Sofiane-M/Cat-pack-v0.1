@@ -1,0 +1,68 @@
+package Tp1;
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+
+public class appB extends JFrame {
+
+	public static int Nbr;
+  
+	public static void main(String[] args){
+		
+		JFrame f = new JFrame("Exo 03");
+		f.setSize(600, 600);
+        
+      
+        f.setLayout(new FlowLayout());
+      
+     
+        f.setVisible(true);
+       
+        Nbr = (int) (Math.random() * 100) + 1;
+        JLabel label = new JLabel("Entrez un nombre entre 1 et 100:");
+        JTextField tf = new JTextField(5);
+        JButton submite = new JButton("Go!");
+        JLabel labelResult = new JLabel("");
+        
+        f.add(label);
+        f.add(tf);
+        f.add(submite);
+	    f.add(labelResult);
+	
+          submite.addActionListener(new ActionListener() {
+        	
+        	public void actionPerformed(ActionEvent e){
+               int userguesse = Integer.parseInt(tf.getText());
+        		if(userguesse > Nbr){labelResult.setText("try something less bigger!!");} 
+        		if(userguesse < Nbr){labelResult.setText("try something More bigger!!");} 
+        		if(userguesse == Nbr){
+        	   labelResult.setText("YOU won");
+        	   submite.setEnabled(false);} 
+               }
+        	
+        });
+		 
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
